@@ -57,6 +57,8 @@ def setup_deepspeech(version):
         Path(str(_checkpoint_file).replace(".tar.gz", "")).rename(checkpoints_dir)
 
     (BASE_DIR / "output_models").mkdir(parents=True, exist_ok=True)
+    # Version file is incorrect due to unzip rather than git clone, creating no symlink
+    (deepspeech_path / "VERSION").write_text(version)
 
 
 def check_training_is_done():

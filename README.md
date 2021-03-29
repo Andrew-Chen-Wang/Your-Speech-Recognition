@@ -14,7 +14,10 @@ Date Created: 28 March 2020
 ---
 ### Requirements
 
-- Python 3.x (Mac has this installed already)
+- Python 3.5-3.7 (Mac has this installed already)
+    - 3.7 upper bound due to Tensorflow
+    - If TensorFlow isn't installed, try creating your virtualenv using 
+      `python3.7 -m venv venv` or whatever other python 3.x version you have installed.
 
 For the voice recognition:
 - Portaudio
@@ -25,6 +28,9 @@ For the voice recognition:
 1. Run in your terminal or command prompt, depending on your system:
     - Windows: `virtualenv venv && venv\Scripts\activate`
     - Mac/Linux: `virtualenv venv && source venv/bin/activate`
+    - If you need to use a specific version of Python instead of your default (perhaps 
+      due to the upper Python version bound), then run  `python3.7 -m venv venv` or 
+      whatever other python 3.x version you have installed.
 2. First you need to prepare some data for training. Run: 
    `python app.py`
 3. Open your browser, head to the website http://localhost:5000/ and follow
